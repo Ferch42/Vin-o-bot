@@ -21,6 +21,43 @@ function initMap() {
 
 
 
+/////////////////////////////////
+
+
+function onRowClick(tableId, callback) {
+    var table = document.getElementById(tableId),
+        rows = table.getElementsByTagName("tr"),
+        i;
+        console.log("value>>");
+    for (i = 0; i < rows.length; i++) {
+        table.rows[i].onclick = function (row) {
+            return function () {
+                callback(row);
+            };
+        }(table.rows[i]);
+    }
+};
+ 
+onRowClick("winetable", function (row){
+    var value = row.getElementsByTagName("td")[0].innerHTML;
+    document.getElementById('click-response').innerHTML = value + " clicked!";
+    console.log("value>>", value);
+});
+
+function abacaxi(){
+	console.log(this)
+}
+
+
+
+
+
+
+
+//////////////////////////
+
+
+
 function mainCtrl($scope, $http, ChartJsProvider){
   	
 
@@ -81,6 +118,7 @@ function mainCtrl($scope, $http, ChartJsProvider){
 				$scope.query_string = $scope.query_string + " ?wine ex:hasTasteProfile ex:"+selected_tastes[j].value+ " ."
 			}
 			$scope.query_string = $scope.query_string +  " ?wine rdf:type "+colour_input + " . ";
+			//$scope.query_string = $scope.query_string +  " ?wine rdf:type "+colour_input + " . ";
 
 			$scope.query_string = $scope.query_string +  `?wine rdfs:label ?winelabel .
     ?wine ex:concatString ?taste_profile .
@@ -120,8 +158,36 @@ function mainCtrl($scope, $http, ChartJsProvider){
 					cell.innerHTML = $scope.resultz["results"]["bindings"][j][$scope.resultz["head"]["vars"][i]]["value"];
 				}
 			}
+			var cells = winetable.getElementsByTagName('td');
 
-			
+
+
+			for (var i = 0; i < cells.length; i++) {
+			        // Take each cell
+			        var cell = cells[i];
+			        // do something on onclick event for cell
+			        cell.onclick = function () {
+			            // Get the row id where the cell exists
+			            var rowId = this.parentNode.rowIndex;
+
+			            var rowsNotSelected = winetable.getElementsByTagName('tr');
+			            for (var row = 0; row < rowsNotSelected.length; row++) {
+			                rowsNotSelected[row].style.backgroundColor = "";
+			                rowsNotSelected[row].classList.remove('selected');
+			            }
+			            var rowSelected = winetable.getElementsByTagName('tr')[rowId];
+			            rowSelected.style.backgroundColor = "yellow";
+			            rowSelected.className += " selected";
+
+			            $scope.lat_lng_query = " PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> select ?lat ?lng where { ?s rdfs:label "+rowSelected.cells[0].innerHTML+" . ?s }"
+			            var map = new google.maps.Map(document.getElementById('map'), {
+        						center: {lat: 52.334518, lng: 4.866753},
+      						  zoom: 6
+     					 });
+			        }
+    }
+
+			console.log(cells)
 
 
 

@@ -222,6 +222,18 @@ th {
 
 
 
+    <div class="container mt-5 mb-5">
+		 <div id="map" text-align="center"></div>
+		 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBCGLzhK-m3Zq1EWCBkEZynP0cQ9oQb5uo"></script>
+		 <script>
+      var map = new google.maps.Map(document.getElementById('map'), {
+        center: {lat: -34.397, lng: 150.644},
+        zoom: 6
+      });
+    </script>
+
+
+	</div> 
 
 
     <div class="container mt-5 mb-5">
@@ -249,19 +261,14 @@ th {
 
 
 
-
-    <div class="container mt-5 mb-5">
-		 <div id="map" text-align="center"></div>
-	</div> 
-<!---
+<!--
     <script async defer
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBCGLzhK-m3Zq1EWCBkEZynP0cQ9oQb5uo&callback=initMap">
     </script>
 
+
+
 -->
-
-
-
 
 
     <!-- Footer -->

@@ -13,6 +13,32 @@
     <link href="./css/bootstrap.min.css" rel="stylesheet">
 	<link href="./css/css-custom.css" rel="stylesheet">
 
+	<style>
+
+ #map {
+        height: 400px;  /* The height is 400 pixels */
+        width: 50%;  /* The width is the width of the web page */
+       }
+
+
+		table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th, td {
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even){background-color: #f2f2f2}
+
+th {
+  background-color: #f58723;
+  color: white;
+}
+	</style>
+
 
   </head>
 
@@ -34,81 +60,209 @@
 		   <div class="row">
 		     <div class="col-8">
 	   		 <!-- TODO : Ex 1 here  -->
-		     	<h1>Input</h1>
+		     	<!--h1>Input the wine preferences</h1> -->
              	<h2>Taste Profile</h2>
-             	<p>Hold down the Ctrl (windows) / Command (Mac) button to select multiple options.</p>
-             	<select name="taste profiles" size="4" multiple>
-    				<option value="lemon">lemon</option>
-						<option value="dried">dried</option>
-						<option value="apple">apple</option>
-						<option value="fruit">fruit</option>
-						<option value="sweet">sweet</option>
-						<option value="raspberry">raspberry</option>
-						<option value="juicy">juicy</option>
-						<option value="rich">rich</option>
-						<option value="plum">plum</option>
-						<option value="spicy">spicy</option>
-						<option value="smooth">smooth</option>
-						<option value="licorice">licorice</option>
-						<option value="pepper">pepper</option>
-						<option value="chocolate">chocolate</option>
-						<option value="wood">wood</option>
-						<option value="herb">herb</option>
-						<option value="pear">pear</option>
-						<option value="citrus">citrus</option>
-						<option value="crisp">crisp</option>
-						<option value="earthy">earthy</option>
-						<option value="dry">dry</option>
-						<option value="tobacco">tobacco</option>
-						<option value="spice">spice</option>
-						<option value="vanilla">vanilla</option>
-						<option value="cherry">cherry</option>
-						<option value="blackberry">blackberry</option>
-						<option value="berry">berry</option>
-						<option value="firm">firm</option>
-						<option value="ripe">ripe</option>
-						<option value="oak">oak</option>
-						<option value="soft">soft</option>
-						<option value="creamy">creamy</option>
-						<option value="peach">peach</option>
+             	
+             	<p>Select the taste profiles you would like to search for: </p>
+             	<select id="taste profiles" size="4" multiple>
+					<option value="Apple">Apple</option>
+					<option value="Berry">Berry</option>
+					<option value="Blackberry">Blackberry</option>
+					<option value="Cherry">Cherry</option>
+					<option value="Chocolate">Chocolate</option>
+					<option value="Citrus">Citrus</option>
+					<option value="Creamy">Creamy</option>
+					<option value="Crisp">Crisp</option>
+					<option value="Dried">Dried</option>
+					<option value="Dry">Dry</option>
+					<option value="Earthy">Earthy</option>
+					<option value="Firm">Firm</option>
+					<option value="Fruit">Fruit</option>
+					<option value="Herb">Herb</option>
+					<option value="Juicy">Juicy</option>
+					<option value="Lemon">Lemon</option>
+					<option value="Licorice">Licorice</option>
+					<option value="Oak">Oak</option>
+					<option value="Peach">Peach</option>
+					<option value="Pear">Pear</option>
+					<option value="Pepper">Pepper</option>
+					<option value="Plum">Plum</option>
+					<option value="Raspberry">Raspberry</option>
+					<option value="Rich">Rich</option>
+					<option value="Ripe">Ripe</option>
+					<option value="Smooth">Smooth</option>
+					<option value="Soft">Soft</option>
+					<option value="Spice">Spice</option>
+					<option value="Spicy">Spicy</option>
+					<option value="Sweet">Sweet</option>
+					<option value="Tobacco">Tobacco</option>
+					<option value="Vanilla">Vanilla</option>
+					<option value="Wood">Wood</option>
 
   				</select>
 
-  				<h2>Location</h2>
+  				<p></p>	
+  				<p>Hold down the Ctrl (windows) / Command (Mac) button to select multiple options.</p>
+
+  				
+  				<!-- TODO : Ex 2 here -->
+					<h2>Location</h2>
+					<p>Select the locations from which you would like to discover new wines: </p>
+					<select id="location">
+					 	 <optgroup label="Continents">
+
+
+					 	 	<option value="America">America</option>
+					    	<option value="Africa">Africa</option>
+					    	<option value="Asia">Asia</option>
+					    	<option value="Europe">Europe</option>
+					    	<option value="Oceania">Oceania</option>
+
+					  	   </optgroup>
+					  		<optgroup label="Countries">
+								<option value="Argentina">Argentina</option>
+								<option value="Armenia">Armenia</option>
+								<option value="Australia">Australia</option>
+								<option value="Austria">Austria</option>
+								<option value="Bosnia and Herzegovina">Bosnia and Herzegovina</option>
+								<option value="Brazil">Brazil</option>
+								<option value="Bulgaria">Bulgaria</option>
+								<option value="Canada">Canada</option>
+								<option value="Chile">Chile</option>
+								<option value="China">China</option>
+								<option value="Croatia">Croatia</option>
+								<option value="Cyprus">Cyprus</option>
+								<option value="Czech Republic">Czech Republic</option>
+								<option value="Egypt">Egypt</option>
+								<option value="England">England</option>
+								<option value="France">France</option>
+								<option value="Georgia">Georgia</option>
+								<option value="Germany">Germany</option>
+								<option value="Greece">Greece</option>
+								<option value="Hungary">Hungary</option>
+								<option value="India">India</option>
+								<option value="Israel">Israel</option>
+								<option value="Italy">Italy</option>
+								<option value="Lebanon">Lebanon</option>
+								<option value="Luxembourg">Luxembourg</option>
+								<option value="Macedonia">Macedonia</option>
+								<option value="Mexico">Mexico</option>
+								<option value="Moldova">Moldova</option>
+								<option value="Morocco">Morocco</option>
+								<option value="New Zealand">New Zealand</option>
+								<option value="Peru">Peru</option>
+								<option value="Portugal">Portugal</option>
+								<option value="Romania">Romania</option>
+								<option value="Serbia">Serbia</option>
+								<option value="Slovakia">Slovakia</option>
+								<option value="Slovenia">Slovenia</option>
+								<option value="South Africa">South Africa</option>
+								<option value="Spain">Spain</option>
+								<option value="Switzerland">Switzerland</option>
+								<option value="Turkey">Turkey</option>
+								<option value="US">US</option>
+								<option value="Ukraine">Ukraine</option>
+								<option value="Uruguay">Uruguay</option>
+
+
+					  </optgroup>
+					</select>
+
+						<p></p>
+					 <h2>Price Category</h2>
+  			    <p>Select the price category of those wines: </p>
+					<select id="price category">1
+						<option value="high">high</option>
+						<option value="medium">medium</option>
+						<option value="low">low</option>
+						
+
+
+					</select>
+					<p></p>
+				<p>Low: strictly below 30 euros; Medium: between 30 and 80 euros; High: strictly above 80 euros</p>
+
+
+				<h2>Colour</h2>
+  			    <p>Select the prefered colour of the wines: </p>
+					<select id="colour">1
+						<option value="bevon:RedWine">Red</option>
+						<option value="vin:RoseWine">Rose</option>
+						<option value="bevon:WhiteWine">White</option>
+						
+
+
+					</select>
+					<p></p>
+
+				<h2>Sorting</h2>
+  			    <p>Select sorting options: </p>
+					<select id="sorting">1
+						<option value="?rating">rating</option>
+						<option value="?price">price</option>
+
+
+					</select>
+					<p></p>
+					<p></p>
+					<p></p>
+   
+    			<div class="input-group mb-3">
+                      
+                        <button class="btn btn-outline-secondary" ng-click="doMyAction()" type="button">GO!</button>
+
+                    </div>
+
+  				
 		   	 </div>
 		 </div>
 	 	</div> <!-- end container  -->
-		 
-		 
-		 <div class="container mt-5 mb-5">
-		   <div class="row">
-		     <div class="col-8 align-self-center">
-				   <!-- TODO : Ex 2 here -->
-		
-			     </div>
-	
-			 
-		   </div>
-		 </div> 	 <!-- end Ex 2 -->
-	
-	 
-	  
-		 <div class="container mt-5 mb-5">
-		   <div class="row">
-  		     <div class="col-8">
-  				   <!-- TODO Ex 3 -->
-  			    
-				
-
-
-  		     </div>
-		    </div>
-		 </div>
-	
-	
 	   
     </div>
+
+
+
+
+
+    <div class="container mt-5 mb-5">
+		   <div class="row">
+		     <div class="col-8 align-self-center">
+
+		     	<h2>QUERY</h2>
+		     	<p>{{query_string}}</p>
+				   <table id="winetable">
+				   	<tr>
+				   		<th>Wine</th>
+				   		<th>Taste Profile</th>
+				   		<th>Winery</th>
+				   		<th>Grape</th>
+				   		<th>Rating</th>
+				   		<th>Price</th>
+				   	</tr>
+				   </table>
+                    
+			     </div>
+
+		   </div>
+		 </div> 	
  
+
+
+
+
+    <div class="container mt-5 mb-5">
+		 <div id="map" text-align="center"></div>
+	</div> 
+<!---
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBCGLzhK-m3Zq1EWCBkEZynP0cQ9oQb5uo&callback=initMap">
+    </script>
+
+-->
+
+
+
+
 
     <!-- Footer -->
     <footer class="footer sticky py-3 bg-dark">

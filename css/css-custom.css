@@ -16,3 +16,8 @@
 .my-card:hover {
 	border-color: #f58723;
 }
+
+grapeimage{
+	width: 200px;
+	height: 200px;
+}

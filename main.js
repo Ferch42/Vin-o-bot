@@ -68,7 +68,7 @@ function mainCtrl($scope, $http, ChartJsProvider){
 	//$scope.map_coordinates = {lat: 52.334518, lng: 4.866753};
 
 
-	$scope.myendpoint = "http://localhost:7200/repositories/wine?query=";
+	$scope.myendpoint = "http://localhost:7200/repositories/final?query=";
 	
 
 
@@ -184,6 +184,9 @@ function mainCtrl($scope, $http, ChartJsProvider){
         						center: {lat: 52.334518, lng: 4.866753},
       						  zoom: 6
      					 });
+						 
+						 var grape_image = document.getElementById("grapeimage");
+						 grape_image.src = "https://imgflip.com/s/meme/Mocking-Spongebob.jpg"; 
 			        }
     }
 

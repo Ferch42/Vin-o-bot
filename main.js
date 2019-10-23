@@ -80,7 +80,7 @@ function mainCtrl($scope, $http, ChartJsProvider){
 				var location_input = location_drop_down_list.options[location_drop_down_list.selectedIndex].value;
 				console.log(location_input)
 
-				var price_category_drop_down_list = document.getElementById("price category");
+				var price_category_drop_down_list = document.getElementById("pricecategory");
 				var price_input = price_category_drop_down_list.options[price_category_drop_down_list.selectedIndex].value;
 				console.log(price_input)
 
@@ -95,12 +95,10 @@ function mainCtrl($scope, $http, ChartJsProvider){
 				var sorting_input = sorting_drop_down_list.options[sorting_drop_down_list.selectedIndex].value;
 				console.log(sorting_input)
 
-				var taste_drop_down_list = document.getElementById("taste profiles");
+				var taste_drop_down_list = document.getElementById("tasteprofiles");
 				var selected_tastes = taste_drop_down_list.selectedOptions;
 				console.log(taste_drop_down_list)
 				console.log(selected_tastes)
-
-			
 
 
 

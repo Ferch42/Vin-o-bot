@@ -1,12 +1,27 @@
 .footer-sticky {
-    position: fixed;
     left: 0;
     bottom: 0;
     width: 100%;
+	height:60px;
+	background-color: #6A7FA0;
+}
+
+.addMore{
+  border: none;
+  width: 25px;
+  height: 25px;
+  background-color: #eee;
+  transition: all ease-in-out 0.2s;
+  float:right;
+    font-size:15px;
+}
+.addMore:hover{
+  border: 1px solid #888;
+  background-color: #ddd;
 }
 
 .bg-acl {
-	background-color: #f58723;
+	background-color: #6A7FA0;
 }
 
 .a-acl {
@@ -17,7 +32,73 @@
 	border-color: #f58723;
 }
 
-grapeimage{
-	width: 200px;
-	height: 200px;
+#box {
+	height: 350px;
+	width: 375px;
+	display: inline-block;
+}
+
+
+#map {
+	width:375px;;
+	height:400px;
+	float: above;
+	display: inline-block;
+}
+
+#grapeimage{
+	width: 188px;
+	height:125px;
+	float: below;
+	display: inline-block;
+}
+
+#querycontainer{
+	border-style: solid;
+	width:934px;
+	
+}
+
+#container {
+	background-color: #6A7FA0;
+}
+h2 {
+    font-size:20px;
+	display: inline-block;
+}
+
+#main {
+  width: 200px;
+  display:inline-block;
+}
+
+#tasteprofiles{
+	width:250px;
+	height:100px;
+	float:right;
+	display:inline-block;
+}
+
+#location{
+	width:250px;
+	float:right;
+	display:inline-block;
+}
+
+#pricecategory{
+	width:250px;
+	float:right;
+	display:inline-block;
+}
+
+#colour{
+	width:250px;
+	float:right;
+	display:inline-block;
+}
+
+#sorting{
+	width:250px;
+	float:right;
+	display:inline-block;
 }

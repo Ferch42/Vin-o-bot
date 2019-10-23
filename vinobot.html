@@ -47,7 +47,7 @@ th {
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-acl mb-5">
 	  <a class="navbar-brand" href="#">
-	      <img src="file:///C:/Users/Sharu/Downloads/logo.webp" height="50" alt="">
+	      <img src="image/logo.jpg" height="50" alt="">
 		  Vin-o-bot
 	    </a>
     </nav>
@@ -59,12 +59,13 @@ th {
 		 <div class="container mt-5 mb-5">
 		   <div class="row">
 		     <div class="col-8">
-	   		 <!-- TODO : Ex 1 here  -->
+
 		     	<!--h1>Input the wine preferences</h1> -->
-             	<h2>Taste Profile</h2>
+				
+				<div id="main">
+             	<h2>Taste Profile</h2><button class="addMore" title="Select the taste profiles you would like to search for. Hold down the Ctrl (windows) / Command (Mac) button to select multiple options.">i</button></div>
              	
-             	<p>Select the taste profiles you would like to search for: </p>
-             	<select id="taste profiles" size="4" multiple>
+             	<select id="tasteprofiles" size="4" multiple>
 					<option value="Apple">Apple</option>
 					<option value="Berry">Berry</option>
 					<option value="Blackberry">Blackberry</option>
@@ -101,16 +102,13 @@ th {
 
   				</select>
 
-  				<p></p>	
-  				<p>Hold down the Ctrl (windows) / Command (Mac) button to select multiple options.</p>
-
-  				
-  				<!-- TODO : Ex 2 here -->
-					<h2>Location</h2>
-					<p>Select the locations from which you would like to discover new wines: </p>
+  				<br></br>
+			    <br></br>
+				
+					<div id="main">
+					<h2>Location</h2><button class="addMore" title="Select the locations from which you would like to discover new wines.">i</button></div>
 					<select id="location">
 					 	 <optgroup label="Continents">
-
 
 					 	 	<option value="America">America</option>
 					    	<option value="Africa">Africa</option>
@@ -164,52 +162,42 @@ th {
 								<option value="Ukraine">Ukraine</option>
 								<option value="Uruguay">Uruguay</option>
 
-
 					  </optgroup>
+					  
 					</select>
 
-						<p></p>
-					 <h2>Price Category</h2>
-  			    <p>Select the price category of those wines: </p>
-					<select id="price category">1
-						<option value="high">high</option>
-						<option value="medium">medium</option>
-						<option value="low">low</option>
+					<br></br>
+					
+					<div id="main">
+					 <h2>Price Category</h2><button class="addMore" title="Select the price category of those wines. Low: strictly below €30, Medium: between €30 and €80 and High: strictly above €80.">i</button></div>
+					<select id="pricecategory">1
+						<option value="high">High</option>
+						<option value="medium">Medium</option>
+						<option value="low">Low</option>
 						
 
-
 					</select>
-					<p></p>
-				<p>Low: strictly below 30 euros; Medium: between 30 and 80 euros; High: strictly above 80 euros</p>
+					<br></br>
 
-
-				<h2>Colour</h2>
-  			    <p>Select the prefered colour of the wines: </p>
+				<div id="main">
+				<h2>Colour</h2><button class="addMore" title="Select the prefered colour of the wines.">i</button></div>
 					<select id="colour">1
 						<option value="bevon:RedWine">Red</option>
-						<option value="vin:RoseWine">Rose</option>
 						<option value="bevon:WhiteWine">White</option>
-						
-
-
 					</select>
-					<p></p>
+					<br></br>
 
-				<h2>Sorting</h2>
-  			    <p>Select sorting options: </p>
+				<div id="main">
+				<h2>Sorting</h2><button class="addMore" title="Select sorting options.">i</button></div>
 					<select id="sorting">1
-						<option value="?rating">rating</option>
-						<option value="?price">price</option>
-
-
+						<option value="?rating">Rating</option>
+						<option value="?price">Price</option>
 					</select>
-					<p></p>
-					<p></p>
-					<p></p>
+					<br></br>
    
     			<div class="input-group mb-3">
                       
-                        <button class="btn btn-outline-secondary" ng-click="doMyAction()" type="button">GO!</button>
+                        <button class="btn btn-outline-secondary" ng-click="doMyAction()" type="button">Submit</button>
 
                     </div>
 
@@ -220,28 +208,17 @@ th {
 	   
     </div>
 
-
-
     <div class="container mt-5 mb-5">
-		 <div id="map" text-align="center"></div>
-		 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBCGLzhK-m3Zq1EWCBkEZynP0cQ9oQb5uo"></script>
-		 <script>
-      var map = new google.maps.Map(document.getElementById('map'), {
-        center: {lat: -34.397, lng: 150.644},
-        zoom: 6
-      });
-    </script>
-
-
-	</div> 
-
-
-    <div class="container mt-5 mb-5">
-	
+	<div id = "querycontainer">
 	<h2>QUERY</h2>
 				<p>{{query_string}}</p>
+	</div>
+	
+	<br></br>
+		   
 		   <div class="row">
-		     <div class="col-8 align-self-center" style ="height:500px;overflow:auto;">
+		    
+			<div class="col-8 align-self-center" style ="height:500px;overflow:auto;">
 			 
 			   <table id="winetable">
 				   	<tr>
@@ -254,15 +231,26 @@ th {
 				   	</tr>
 				   </table>
                     
-				
-			</div>
-				
-			<div>
-				<img id="grapeimage" src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Red_and_white_wine_12-2015.jpg/330px-Red_and_white_wine_12-2015.jpg" alt="image">
 			</div>
 			
+			<div id ="box">
+						
+				<div id="map" text-align="right"></div>
+				 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBCGLzhK-m3Zq1EWCBkEZynP0cQ9oQb5uo"></script>
+				 <script>
+					var map = new google.maps.Map(document.getElementById('map'), {
+					center: {lat: -34.397, lng: 150.644},
+					zoom: 6
+					});
+				</script>
+			
+				<div>
+					<img id="grapeimage" src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Red_and_white_wine_12-2015.jpg/330px-Red_and_white_wine_12-2015.jpg" alt="image">
+				</div>
+				</div>
+			
 				 
-			     </div>
+			</div>
 
 		   </div>	
 
@@ -278,9 +266,9 @@ th {
 
 
     <!-- Footer -->
-    <footer class="footer sticky py-3 bg-dark">
+    <footer class="footer-sticky">
       <div class="container">
-        <p class="m-0 text-center text-white">Copyright &copy; Vu_Td-CoopLab 2018</p>
+        <p class="m-0 text-center text-white">Final project Knowledge & Data: group 42</p>
       </div>
     </footer>
 

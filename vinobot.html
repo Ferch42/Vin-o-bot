@@ -108,60 +108,16 @@ th {
 					<div id="main">
 					<h2>Location</h2><button class="addMore" title="Select the locations from which you would like to discover new wines.">i</button></div>
 					<select id="location">
-					 	 <optgroup label="Continents">
-
-					 	 	<option value="America">America</option>
-					    	<option value="Africa">Africa</option>
-					    	<option value="Asia">Asia</option>
-					    	<option value="Europe">Europe</option>
-					    	<option value="Oceania">Oceania</option>
 
 					  	   </optgroup>
 					  		<optgroup label="Countries">
 								<option value="Argentina">Argentina</option>
-								<option value="Armenia">Armenia</option>
 								<option value="Australia">Australia</option>
-								<option value="Austria">Austria</option>
-								<option value="Bosnia and Herzegovina">Bosnia and Herzegovina</option>
-								<option value="Brazil">Brazil</option>
-								<option value="Bulgaria">Bulgaria</option>
 								<option value="Canada">Canada</option>
-								<option value="Chile">Chile</option>
-								<option value="China">China</option>
-								<option value="Croatia">Croatia</option>
-								<option value="Cyprus">Cyprus</option>
-								<option value="Czech Republic">Czech Republic</option>
-								<option value="Egypt">Egypt</option>
-								<option value="England">England</option>
 								<option value="France">France</option>
-								<option value="Georgia">Georgia</option>
-								<option value="Germany">Germany</option>
-								<option value="Greece">Greece</option>
-								<option value="Hungary">Hungary</option>
-								<option value="India">India</option>
-								<option value="Israel">Israel</option>
 								<option value="Italy">Italy</option>
-								<option value="Lebanon">Lebanon</option>
-								<option value="Luxembourg">Luxembourg</option>
-								<option value="Macedonia">Macedonia</option>
-								<option value="Mexico">Mexico</option>
-								<option value="Moldova">Moldova</option>
-								<option value="Morocco">Morocco</option>
-								<option value="New Zealand">New Zealand</option>
-								<option value="Peru">Peru</option>
-								<option value="Portugal">Portugal</option>
-								<option value="Romania">Romania</option>
-								<option value="Serbia">Serbia</option>
-								<option value="Slovakia">Slovakia</option>
-								<option value="Slovenia">Slovenia</option>
-								<option value="South Africa">South Africa</option>
 								<option value="Spain">Spain</option>
-								<option value="Switzerland">Switzerland</option>
-								<option value="Turkey">Turkey</option>
 								<option value="US">US</option>
-								<option value="Ukraine">Ukraine</option>
-								<option value="Uruguay">Uruguay</option>
-
 					  </optgroup>
 					  
 					</select>
@@ -171,9 +127,9 @@ th {
 					<div id="main">
 					 <h2>Price Category</h2><button class="addMore" title="Select the price category of those wines. Low: strictly below €30, Medium: between €30 and €80 and High: strictly above €80.">i</button></div>
 					<select id="pricecategory">1
-						<option value="high">High</option>
-						<option value="medium">Medium</option>
-						<option value="low">Low</option>
+						<option value="HighPricedWine">High</option>
+						<option value="MedPricedWine">Medium</option>
+						<option value="LowPricedWine">Low</option>
 						
 
 					</select>
@@ -190,8 +146,8 @@ th {
 				<div id="main">
 				<h2>Sorting</h2><button class="addMore" title="Select sorting options.">i</button></div>
 					<select id="sorting">1
-						<option value="?rating">Rating</option>
-						<option value="?price">Price</option>
+						<option value="DESC(?rating">Rating</option>
+						<option value="ASC(?price">Price</option>
 					</select>
 					<br></br>
    
@@ -236,7 +192,7 @@ th {
 			<div id ="box">
 						
 				<div id="map" text-align="right"></div>
-				 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBCGLzhK-m3Zq1EWCBkEZynP0cQ9oQb5uo"></script>
+				 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD7KwPwYtpOqw9Y0WeXTPOmNXKgpWDuj10"></script>
 				 <script>
 					var map = new google.maps.Map(document.getElementById('map'), {
 					center: {lat: -34.397, lng: 150.644},
